@@ -3,7 +3,7 @@
     "description": "A Laravel Eloquent Model trait for adding User Id's to Eloquent Models",
     "type": "package",
     "license": "MIT",
-    "keywords": ["laravel", "eloquent", "uid"],
+    "keywords": ["laravel", "eloquent", "trait"],
     "authors": [
         {
             "name": "Sam Whisker",
