@@ -1,0 +1,23 @@
+{
+    "name": "koodoo/laravel-trait-updatedby",
+    "description": "A Laravel Eloquent Model trait for adding User Id's to Eloquent Models",
+    "type": "package",
+    "license": "MIT",
+    "keywords": ["laravel", "eloquent", "uid"],
+    "authors": [
+        {
+            "name": "Sam Whisker",
+            "email": "sam@koodoocreative.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Koodoo\\laravelTraitUpdatedBy\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
