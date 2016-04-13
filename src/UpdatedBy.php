@@ -1,5 +1,5 @@
 <?php
-namespace Koodoo\laravelUpdatedBy;
+namespace Koodoo\laravelTraitUpdatedBy;
 
 trait UpdatedBy
 {
