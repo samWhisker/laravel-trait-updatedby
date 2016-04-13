@@ -1,9 +1,9 @@
 <?php
 namespace Koodoo\laravelUpdatedBy;
 
-trait UpdatedByTrait
+trait UpdatedBy
 {
-    protected static function bootUpdatedByTrait()
+    protected static function bootUpdatedBy()
     {
     	//use Koodoo\laravelUpdatedBy\UpdatedByTrait;
     	//use UpdatedByTrait;
