@@ -5,8 +5,10 @@ trait UpdatedBy
 {
     protected static function bootUpdatedBy()
     {
-    	//use Koodoo\laravelUpdatedBy\UpdatedByTrait;
-    	//use UpdatedByTrait;
-        dd('Saving user ID');
+		static::saving(function ($model) 
+        {
+        	$user = \Auth::user();
+            $model->updated_by = $user->id;
+        });
     }
 }
