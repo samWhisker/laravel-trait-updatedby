@@ -9,7 +9,7 @@ trait UpdatedBy
         {
         	$user = \Auth::user();
             $model->updated_by = $user->id;
-            $model->company_id = $company->id;
+            $model->company_id = $user->company_id;
         });
     }
 }
