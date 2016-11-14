@@ -7,9 +7,12 @@ trait UpdatedBy
     {
 		static::saving(function ($model) 
         {
-        	$user = \Auth::user();
-            $model->updated_by = $user->id;
-            $model->company_id = $user->company_id;
+        	if(!\Auth::guest())
+	        {
+	            $model->updated_by = \Auth::user()->id;
+            	$model->company_id = \Auth::user()->company_id;
+	        }
+            
         });
     }
 }
