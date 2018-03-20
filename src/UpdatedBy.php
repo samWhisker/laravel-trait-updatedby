@@ -5,14 +5,18 @@ trait UpdatedBy
 {
     protected static function bootUpdatedBy()
     {
-		static::saving(function ($model) 
+        static::saving(function ($model)
         {
-        	if(!\Auth::guest())
-	        {
-	            $model->updated_by = \Auth::user()->id;
-            	$model->company_id = \Auth::user()->company_id;
-	        }
-            
+            if(!\Auth::guest())
+            {
+                $model->updated_by = \Auth::user()->id;
+                $model->company_id = \Auth::user()->company_id;
+            }
+            else
+            {
+                $model->updated_by = '1';
+                $model->company_id = '1';
+            }
         });
     }
 }
