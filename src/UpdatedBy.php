@@ -12,10 +12,15 @@ trait UpdatedBy
                 $model->updated_by = \Auth::user()->id;
                 $model->company_id = \Auth::user()->company_id;
             }
-            else
-            {
-                $model->updated_by = '1';
-                $model->company_id = '1';
+            else {
+                // set the updated by if the model has not previously been
+                // updated by a real person.
+                if (!$model->updated_by) {
+                    $model->updated_by = '1';
+                }
+                if (!$model->company_id) {
+                    $model->company_id = '1';
+                }
             }
         });
     }
